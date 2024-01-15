@@ -37,7 +37,6 @@ jobs:
         # Vous pourriez avoir besoin d'étapes de configuration supplémentaires pour votre environnement
 
     - name: Convertir le notebook Jupyter en script Python
-      run: jupyter nbconvert --to script heartdis.ipynb
-
+       jupyter nbconvert --to script --output heartdis heartdis.ipynb
     - name: Exécuter le script Python
       run: python heartdis.py
