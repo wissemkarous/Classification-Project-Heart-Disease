@@ -38,5 +38,6 @@ jobs:
 
     - name: Convertir le notebook Jupyter en script Python
        jupyter nbconvert --to script --output heartdis heartdis.ipynb
+       
     - name: Exécuter le script Python
       run: python heartdis.py
