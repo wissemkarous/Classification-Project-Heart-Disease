@@ -31,9 +31,8 @@ jobs:
         python -m pip install opencv-python tensorflow numpy matplotlib imageio
        
         # Vous pourriez avoir besoin d'étapes de configuration supplémentaires pour votre environnement
-    - name: Convertir le notebook Jupyter en script Python
-      run: |
-        jupyter nbconvert --to script --output heartdis ${{ github.workspace }}/heartdis.ipynb
+    - name: Convert Jupyter Notebook to Python script
+      run: jupyter nbconvert --to script Classification-Project-Heart-Disease.ipynb
 
 
     - name: Exécuter le script Python
