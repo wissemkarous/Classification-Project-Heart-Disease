@@ -33,8 +33,8 @@ jobs:
         # Vous pourriez avoir besoin d'étapes de configuration supplémentaires pour votre environnement
     - name: Convertir le notebook Jupyter en script Python
       run: |
-        jupyter nbconvert --to script --output heartdis chemin/vers/heartdis.ipynb
-        # Assurez-vous de remplacer "chemin/vers/heartdis.ipynb" par le chemin d'accès réel de votre fichier notebook.
+        jupyter nbconvert --to script --output heartdis ${{ github.workspace }}/heartdis.ipynb
+
 
     - name: Exécuter le script Python
       run: python heartdis.py
